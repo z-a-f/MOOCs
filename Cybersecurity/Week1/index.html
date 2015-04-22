@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breaking the Vigenere cipher</title>
+</head>
+<body>
+<pre>
+<h1><a href="https://class.coursera.org/cryptography-001/wiki/Assignment_1" target="_blank">Coursera Link</a></h1>
+
+<h1>Part 1: Implement of the encryption algorithm(byte-wise XOR)</h1>
+<textarea id="plain" placeholder="Paste your plain text here. Only ASCII characters(including English letters & punctuations) are allowed." rows="20" cols="80"></textarea>
+
+    <input id="privatekey" placeholder="Key in hex (e.g. 0x011A), or in alphabet" size="40" /> <input id="encrypt" type="button" value="↓↓↓Encrypt↓↓↓"/>  <input id="decrypt" type="button" value="↑↑↑Decrypt↑↑↑"/>
+
+<textarea id="encrypted" placeholder="Encrypted Message" rows="20" cols="80"></textarea>
+
+</pre>
+
+<script src="../jquery-1.11.1.js"></script>
+
+<script>
+
+$("#encrypt").click(function (){
+    var plain = $("#plain").val();
+    var key = $("#privatekey").val();
+    $("#encrypted").val(encrypt(plain, key));
+});
+
+$("#decrypt").click(function (){
+    var encrypted = $("#encrypted").val();
+    var key = $("#privatekey").val();
+    $("#plain").val(decrypt(encrypted, key));
+});
+
+
+
+function toHex(num, pad)
+{
+    if (!(num >= 0)) throw Error('Num Error');
+    var hexStr = '';
+    var p;
+    while (num > 0)
+    {
+        p = num % 16;
+        num = Math.floor(num / 16);
+        if (p < 10)
+        {
+            hexStr = String.fromCharCode(p + 48) + hexStr;
+        }
+        else
+        {
+            hexStr = String.fromCharCode(p + 55) + hexStr;
+        }
+    }
+    if (pad)
+    {
+        while (!(hexStr.length >= pad))
+        {
+            hexStr = '0' + hexStr;
+        }
+    }
+    return hexStr;
+}
+
+function formatKey(keyIn)
+{
+    var key = [];
+    var i;
+    if (typeof keyIn == "string"){
+        var keyInt = parseInt(keyIn);
+        if (keyInt > 0)
+        {
+            while (keyInt > 0)
+            {
+                key.unshift(keyInt % 16);
+                keyInt = Math.floor(keyInt / 16);
+            }
+        }
+        else
+        {
+            for (i = 0; i < keyIn.length; i++){
+                key.push(keyIn.charCodeAt(i));
+            }
+        }
+    }
+    return key;
+}
+
+function formatEncrypted(encrypted)
+{
+    var i;
+    var numArr = [];
+    for (i = 0; i < encrypted.length; i += 2)
+    {
+        encryptedByte = parseInt('0x' + encrypted.slice(i, i + 2), 16);
+        numArr.push(encryptedByte);
+    }
+    return numArr;
+}
+
+function encrypt(text, key){
+    var encrypted = "";
+    var encryptedByte;
+    key = formatKey(key);
+    var i;
+    for(i = 0; i < text.length; i++)
+    {
+        encryptedByte = key[i % key.length] ^ text.charCodeAt(i);
+        encrypted += toHex(encryptedByte, 2);
+        //console.log("Encrypt Byte", text.charCodeAt(i), key[i % key.length], toHex(encryptedByte, 2));
+    }
+    //console.log("Encrypt", text, key, encrypted);
+    return encrypted;
+}
+
+function decrypt(encrypted, key, alphabetFlag)
+{
+    var decrypted = "";
+    var decryptedByte;
+    key = formatKey(key);
+    encrypted = formatEncrypted(encrypted);
+    var i;
+    for (i = 0; i < encrypted.length; i ++)
+    {
+        decryptedByte = key[i % key.length] ^ encrypted[i];
+        if (alphabetFlag && (decryptedByte < 32 || decryptedByte > 126 || decryptedByte > 47 && decryptedByte < 58)) return null;
+        decrypted += String.fromCharCode(decryptedByte);
+    }
+    return decrypted;
+}
+
+</script>
+
+<pre>
+<h1>Part 2: Guess The Key</h1>
+<textarea id="ciphertext" rows="20" cols="80">F96DE8C227A259C87EE1DA2AED57C93FE5DA36ED4EC87EF2C63AAE5B9A7EFFD673BE4ACF7BE8923CAB1ECE7AF2DA3DA44FCF7AE29235A24C963FF0DF3CA3599A70E5DA36BF1ECE77F8DC34BE129A6CF4D126BF5B9A7CFEDF3EB850D37CF0C63AA2509A76FF9227A55B9A6FE3D720A850D97AB1DD35ED5FCE6BF0D138A84CC931B1F121B44ECE70F6C032BD56C33FF9D320ED5CDF7AFF9226BE5BDE3FF7DD21ED56CF71F5C036A94D963FF8D473A351CE3FE5DA3CB84DDB71F5C17FED51DC3FE8D732BF4D963FF3C727ED4AC87EF5DB27A451D47EFD9230BF47CA6BFEC12ABE4ADF72E29224A84CDF3FF5D720A459D47AF59232A35A9A7AE7D33FB85FCE7AF5923AA31EDB3FF7D33ABF52C33FF0D673A551D93FFCD33DA35BC831B1F43CBF1EDF67F0DF23A15B963FE5DA36ED68D378F4DC36BF5B9A7AFFD121B44ECE76FEDC73BE5DD27AFCD773BA5FC93FE5DA3CB859D26BB1C63CED5CDF3FE2D730B84CDF3FF7DD21ED5ADF7CF0D636BE1EDB79E5D721ED57CE3FE6D320ED57D469F4DC27A85A963FF3C727ED49DF3FFFDD24ED55D470E69E73AC50DE3FE5DA3ABE1EDF67F4C030A44DDF3FF5D73EA250C96BE3D327A84D963FE5DA32B91ED36BB1D132A31ED87AB1D021A255DF71B1C436BF479A7AF0C13AA14794</textarea>
+
+<input id="getinfo" type="button" value="Get Decrypted" onclick="guess()"/>
+</pre>
+
+
+<script>
+function getNextKey(keyNow, keyLen)
+{
+    if (!keyNow)
+    {
+        keyNow = [];
+        while(keyNow.length < keyLen) keyNow.push(0);
+        return keyNow;
+    }
+    var keyNowNum = 0;
+    for (var i =0; i < keyNow.length; i++)
+    {
+        keyNowNum += Math.pow(256, i) * keyNow[i];
+    }
+    keyNowNum += 1;
+    var nextKey = [];
+    while(nextKey.length < keyLen)
+    {
+        nextKey.push(keyNowNum % 256);
+        keyNowNum = Math.floor(keyNowNum / 256);
+    }
+    if (keyNowNum == 0) return nextKey;
+    return null;
+}
+function getKeyArea(){
+    var encrypted = formatEncrypted($("#ciphertext").val());
+    for (var keylen = 2; keylen < 50; keylen++)
+    {
+        var alive = true;
+        var keyArea = [];
+        console.log("Guessing Key Length equals ", keylen);
+        for (var keyPos = 0; keyPos < keylen; keyPos++)
+        {
+            if (alive == false) break;
+            console.log("Guessing Key position ", keyPos + 1, "/", keylen );
+            var keyCandidates = [];
+            for (var i = 0; i < 256; i ++)
+            {
+                keyCandidates.push(String.fromCharCode(i));
+            }
+            for (var encryptedIndex = keyPos; encryptedIndex < encrypted.length; encryptedIndex+= keylen)
+            {
+                var encryptedByte = toHex(encrypted[encryptedIndex], 2);
+                for (var j = keyCandidates.length - 1; j >= 0; j--)
+                {
+                    var keyByte = keyCandidates[j];
+                    //console.log("Decrypt", encryptedByte, keyByte);
+                    var decryptedChar = decrypt(encryptedByte, keyByte, true);
+                    if (!decryptedChar)
+                    {
+                        keyCandidates.splice(j, 1);
+                        //console.log("keyCandidates length", keyCandidates);
+                    }
+                }
+                if(keyCandidates.length == 0){
+                    console.log("All the Candidates dies on keyPos/keyLen", keyPos, keylen);
+                    alive = false;
+                    break;
+                }
+                //console.log("Pass! keyPos/keylen", keyPos, keylen, keyCandidates);
+            }
+            if (alive == false) break;
+            keyArea[keyPos] = keyCandidates;
+            if (keyPos + 1 == keylen)
+            {
+                console.log("Found the key", keyArea);
+                return keyArea;
+            }
+        }
+    }
+    console.log("Done");
+}
+
+alphabet =
+{
+    e: 0.1268,
+    t: 0.0978,
+    a: 0.0788,
+    o: 0.0776,
+    i: 0.0707,
+    n: 0.0706,
+    s: 0.0634,
+    r: 0.0594,
+    h: 0.0573,
+    l: 0.0394,
+    d: 0.0389,
+    u: 0.0280,
+    c: 0.0268,
+    f: 0.0256,
+    m: 0.0244,
+    w: 0.0214,
+    y: 0.0202,
+    g: 0.0187,
+    p: 0.0186,
+    b: 0.0156,
+    v: 0.0102,
+    k: 0.0060,
+    x: 0.0016,
+    j: 0.0010,
+    q: 0.0009,
+    z: 0.0006,
+
+    " ": 0.015,
+    ".": 0.002
+};
+
+function guess()
+{
+    var keyArea = getKeyArea();
+    var weightArea = [];
+    var bestKey = "";
+    var encrypted = formatEncrypted($("#ciphertext").val());
+    for (var i= 0; i < keyArea.length; i++)
+    {
+        var weight = [];
+        for (var j=0; j < keyArea[i].length; j++)
+        {
+            var keyByte = keyArea[i][j];
+            weight[j] = 0;
+            for (var k = i; k < encrypted.length; k += keyArea.length)
+            {
+                var encryptedByte = toHex(encrypted[k], 2);
+                var decryptedChar = decrypt(encryptedByte, keyByte, true);
+                if (alphabet[decryptedChar.toLowerCase()])
+                {
+                    weight[j] += alphabet[decryptedChar.toLowerCase()];
+                }
+            }
+        }
+        var maxWeight = 0;
+        var bestKeyByte;
+        for (var w = 0; w < weight.length; w ++)
+        {
+            if (weight[w] >= maxWeight)
+            {
+                maxWeight = weight[w];
+                bestKeyByte   = keyArea[i][w];
+            }
+        }
+        bestKey += bestKeyByte;
+        weightArea[i] = weight;
+    }
+    var bestText = decrypt($("#ciphertext").val(), bestKey);
+    alert(bestText);
+}
+</script>
+
+</body>
+</html>
