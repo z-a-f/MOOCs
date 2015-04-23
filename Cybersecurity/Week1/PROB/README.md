@@ -3,3 +3,5 @@
 [Spoiler Text.](#spoiler)
 
 >! Spoiler Text
+
+\{{Simple spoiler|info}}
