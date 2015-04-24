@@ -1,6 +1,7 @@
 ## Answers to the problem set 1 (SPOILERS!!!)
 
 These are the answers - if you didn't do them, please STOP READING NOW - there are a lot of spoilers :)
+*NOTE:* The questions differ every time you do them
 
 ### Question 1
 Data compression is often used in data storage and transmission. Suppose you want to use data compression in conjunction with encryption. Does it make more sense to:
