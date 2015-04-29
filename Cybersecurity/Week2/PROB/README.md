@@ -33,7 +33,7 @@ The total budget is $4 trillion dollars (4·10<sup>12</sup>), while every comput
 ### Question 3
 Let F:{0,1}<sup>n</sup>×{0,1}<sup>n</sup>→{0,1}<sup>n</sup> be a secure PRF (i.e. a PRF where the key space, input space, and output space are all {0,1}<sup>n</sup>) and say n=128. Which of the following is a secure PRF (there is more than one correct answer):
 - [ ] F′(k, x)={F(k,x) when x≠0<sup>n</sup> ; 0<sup>n</sup> otherwise
-- [X] F′(k,x)=F(k,x)[0,…,n−2]     (i.e., F′(k,x) drops the last bit of F(k,x))
+- [X] F′(k,x)=F(k,x)\[0,…,n−2\]     (i.e., F′(k,x) drops the last bit of F(k,x))
 - [X] F′((k1,k2), x)=F(k1,x)||F(k2,x)    (here || denotes concatenation)
 - [X] F′(k, x)=k⨁x
 - [ ] F′(k,x)=F(k, x)⨁F(k, x⊕1<sup>n</sup>)
@@ -46,3 +46,22 @@ Let F:{0,1}<sup>n</sup>×{0,1}<sup>n</sup>→{0,1}<sup>n</sup> be a secure PRF (
 4. The same as one-time pad algo...
 5. F(k, x)⨁F(k, x⊕1<sup>n</sup>)=0<sup>n</sup>, so NO!
 6. F(k, x⨁1<sup>n</sup>) = F(k, x), so YES!
+
+### Question 4
+Recall that the Luby-Rackoff theorem discussed in [Lecture 3.2](https://www.coursera.org/crypto/lecture/view?lecture_id=13) states that applying a three round Feistel network to a secure PRF gives a secure block cipher. Let's see what goes wrong if we only use a two round Feistel. Let F:K×{0,1}<sup>32</sup>)→{0,1}<sup>32</sup>) be a secure PRF. Recall that a 2-round Feistel defines the following PRP   F2:K<sup>2</sup>×{0,1}<sup>64</sup>)→{0,1}<sup>64</sup>): 
+![fNetwork][feisterNet]
+Here R0 is the right 32 bits of the 64-bit input and L0 is the left 32 bits. 
+
+One of the following lines is the output of this PRP F2 using a random key, while the other three are the output of a truly random permutation f:{0,1}<sup>64</sup>→{0,1}<sup>64</sup>. All 64-bit outputs are encoded as 16 hex characters. Can you say which is the output of the PRP?   Note that since you are able to distinguish the output of F2 from random, F2 is not a secure block cipher, which is what we wanted to show. 
+
+Hint: First argue that there is a detectable pattern in the xor of F2(⋅,0<sup>64</sup>) and F2(⋅,1<sup>32</sup>0<sup>32</sup>). Then try to detect this pattern in the given outputs.
+- [ ] On input 0<sup>64</sup> the output is "7b50baab 07640c3d".    On input 1<sup>32</sup>0<sup>32</sup> the output is "ac343a22 cea46d60".
+- [ ] On input 0<sup>64</sup> the output is "4af53267 1351e2e1".    On input 1<sup>32</sup>0<sup>32</sup> the output is "87a40cfa 8dd39154".
+- [ ] On input 0<sup>64</sup> the output is "5f67abaf 5210722b".    On input 1<sup>32</sup>0<sup>32</sup> the output is "bbe033c0 0bc9330e".
+- [X] On input 0<sup>64</sup> the output is "9f970f4e 932330e4".    On input 1<sup>32</sup>0<sup>32</sup> the output is "6068f0b1 b645c008".
+
+##### Explanation
+If we XOR two messages with the same right hand side, and different left hand sides, two round Feistel network produces L1⨁L2...
+
+[feistelNet]: https://d396qusza40orc.cloudfront.net/crypto/images/Feistel.jpg "Feistel network block with 2 rounds"
+
