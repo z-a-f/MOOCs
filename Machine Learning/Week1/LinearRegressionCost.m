@@ -7,7 +7,7 @@ function LinearRegressionCost
     y = linearEquation(a,b,x,[length(Theta0), length(Theta1)]);
     h = linearHypothesis(Theta0, Theta1, x);
     J = linearCost(y, h, length(x));
-    mesh(Theta0, Theta1,J);
+    contour(Theta0, Theta1,J);
     xlabel('\Theta_0'); ylabel('\Theta_1'); zlabel('J(\Theta_0,\Theta_1)');
 end
 
