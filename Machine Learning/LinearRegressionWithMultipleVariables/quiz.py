@@ -4,35 +4,60 @@
 import numpy as np
 
 """ Question 1"""
-class Norm(object):
-    def __init__(self, mean=[], minimum=[], maximum=[]):
-        self.mean = mean
-        self.minimum = minimum
-        self.maximum = maximum
-    def cout(self):
-        print "Mean:\t%s"%np.array_str(self.mean)
-        print "Min:\t%s"%np.array_str(self.minimum)
-        print "Max:\t%s"%np.array_str(self.maximum)
-    def add(self, mean, minimum, maximum):
-        self.mean = np.append(self.mean, mean)
-        self.minimum = np.append(self.minimum, minimum)
-        self.maximum = np.append(self.maximum, maximum)
+class NormMatrix(object):
+    """
+    mean = np.array([])
+    minimum = np.array([])
+    maximum = np.array([])
+    """
+    offset = np.array([])
+    gain = np.array([])
+
+    def __init__(self, X=[]):
+        self.X = np.asarray(X, dtype=float)
+        self.normalized = False
+        self._calcColumnVars()
+
+    def __getitem__(self, key):
+        return self.X[key]
         
-def normalize(a):
-    a = a.transpose()           # columns are now rows
-    norm = Norm()
-    for ii in range(0, len(a)):
-        norm.add(np.mean(a[ii]), np.min(a[ii]), np.max(a[ii]))
-        row = (a[ii] - norm.mean[ii]) / np.abs(norm.maximum[ii] - norm.minimum[ii])
-        print row
-        a[ii,:] = np.array(row)
-        print a
-    return (a, norm)
+    def _calcColumnVars(self):         # This thing gets the means and stuff
+        if self.X.shape != (0,):
+            self.X = self.X.astype(float)
+            self.offset = self.X.mean(axis=0)
+            gain = (self.X.max(axis=0) - self.X.min(axis=0))
+            self.gain = np.where(gain==0, 1, gain)
+
+            """
+            self.mean = self.X.mean(axis=0)
+            self.minimum = self.X.min(axis=0)
+            self.maximum = self.X.max(axis=0)
+            """
+
+    def normalize(self):       # Offset by mean and normalize to range
+        if ~self.normalized:
+            # normed = (self.X - self.mean) / (self.maximum - self.minimum)
+            normed = (self.X - self.offset) / self.gain
+            self.X = np.where(np.isnan(normed), self.X, normed)
+            self.normalized = True
+
+    def addColumn(self, column):
+        self.X = hstack(self.X, column)
+        self.normalized = False
+        
+    def show(self):
+        print "X = %s"%np.array_str(self.X, precision=2)
+        print "Mean = %s"%np.array_str(self.mean, precision=2)
+        print "Min = %s"%np.array_str(self.minimum, precision=2)
+        print "Max = %s"%np.array_str(self.maximum, precision=2)
+        print "Normalized: %s"%self.normalized
     
-
-
 def q1():
     print 'Question 1'
+    x = NormMatrix([1])
+    x.show()
+    # x.addColumn(
+    """
     x = np.array([
         [89,72,94,69]]
     )
@@ -44,6 +69,7 @@ def q1():
     x,_ = normalize(x)
     # print x
     _.cout()
+    """
 
 def quiz():
     print '------------------------------------------------'
@@ -51,3 +77,9 @@ def quiz():
 
 if __name__ == '__main__':
     quiz()
+    """
+    X = NormMatrix(np.array([[1,1,1,1], [89,72,94,69], [1,2,3,4]]).transpose())
+    X.show()
+    X.normalize()
+    X.show()
+    """
