@@ -7,14 +7,14 @@
 %  linear exercise. You will need to complete the following functions 
 %  in this exericse:
 %
-%     [X] warmUpExercise.m
-%     [X] plotData.m
-%     [X] gradientDescent.m
-%     [X] computeCost.m
-%     [X] gradientDescentMulti.m
-%     [X] computeCostMulti.m
-%     [X] featureNormalize.m
-%     [X] normalEqn.m
+%     warmUpExercise.m
+%     plotData.m
+%     gradientDescent.m
+%     computeCost.m
+%     gradientDescentMulti.m
+%     computeCostMulti.m
+%     featureNormalize.m
+%     normalEqn.m
 %
 %  For this exercise, you will not need to change any code in this file,
 %  or any other files other than those mentioned above.

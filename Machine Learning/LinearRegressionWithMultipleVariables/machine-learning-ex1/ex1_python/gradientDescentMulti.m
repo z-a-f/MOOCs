@@ -17,14 +17,7 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
-    % Batch
-    h = X*theta;
-    diff = h - y;
-    D = [];
-    for i = 1:size(X,2)
-        D = [D diff];
-    end
-    theta = theta - alpha / m * sum(D.*X)';
+
 
 
 
