@@ -1,6 +1,9 @@
 # Ignore any Doxy documentation:
 Doxy
 
+# Ignore video folders
+VIDS
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
