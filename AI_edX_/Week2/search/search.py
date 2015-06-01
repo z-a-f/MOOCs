@@ -87,6 +87,53 @@ def depthFirstSearch(problem):
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
     "*** YOUR CODE HERE ***"
+    from game import Directions
+    s = Directions.SOUTH
+    w = Directions.WEST
+    n = Directions.NORTH
+    e = Directions.EAST
+
+    # Plan:
+    """
+    1) Create a list with the current state only
+    1.1) Add the state into the exclusion set
+    2) Get the successors, and pop the current state
+    3) Go to the first element, check if goal
+    4) If not expand, and pop the current state
+    4.1) Add the current state into the exclusion set
+    5) Go to step 2
+    *) use LIFO
+    """
+    """
+    v = problem.getStartState() # current vertice
+    S = util.Stack()            # Stack for the path
+    discovered = set()
+    S.push(v)
+    while (~S.isEmpty()):
+        v = S.pop()
+        if v not in discovered:
+            discovered.add(v)
+            for elem in problem.getSuccessors(v):
+                S.push(elem)
+    """
+    """
+    start = problem.getStartState()
+    visited, stack = set(), util.Stack()
+    stack.push(start)
+    while stack:
+        vertex = stack.pop()
+        if vertex not in visited:
+            visited.add(vertex)
+            stack.push(graph[vertex] - visited)
+    print visited
+    """
+
+    
+    print "Start:", problem.getStartState()
+    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+    print "Start's successors:", problem.getSuccessors(problem.getStartState())
+    current = problem.getSuccessors(problem.getStartState())
+    print current[0][1]
     util.raiseNotDefined()
 
 def breadthFirstSearch(problem):
