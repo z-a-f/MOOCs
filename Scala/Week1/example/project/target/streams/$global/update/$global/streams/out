@@ -5,129 +5,6 @@
 [0m[[0mdebug[0m] [0m	refresh = false[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 {compile=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: found md file for com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0[0m
-[0m[[0mdebug[0m] [0m		=> https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml (4.0.0)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml ...[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0!ivy.xml(ivy.original) (540ms)[0m
-[0m[[0mdebug[0m] [0m	found com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 in sbt-plugin-releases[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-core_2.10;7.1.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalaz#scalaz-core_2.10;7.1.0 {compile=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-core_2.10;7.1.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scalaz#scalaz-core_2.10;7.1.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-core_2.10/7.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-core_2.10/7.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.scalaz#scalaz-core_2.10;7.1.0[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-core_2.10/7.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-core_2.10/7.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.scalaz#scalaz-core_2.10;7.1.0[0m
-[0m[[0mdebug[0m] [0m		tried /home/zafar/.ivy2/local/org.scalaz/scalaz-core_2.10/7.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalaz#scalaz-core_2.10;7.1.0[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scalaz#scalaz-core_2.10;7.1.0[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom (7.1.0)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalaz#scalaz-core_2.10;7.1.0!scalaz-core_2.10.pom(pom.original) (216ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-core_2.10/7.1.0/bundles/scalaz-core_2.10.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-core_2.10/7.1.0/bundles/scalaz-core_2.10.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-core_2.10/7.1.0/bundles/scalaz-core_2.10.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-core_2.10/7.1.0/bundles/scalaz-core_2.10.jar[0m
-[0m[[0mdebug[0m] [0m		tried /home/zafar/.ivy2/local/org.scalaz/scalaz-core_2.10/7.1.0/bundles/scalaz-core_2.10.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scalaz#scalaz-core_2.10;7.1.0 in public[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-core_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.5 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.5 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m	[2.10.5] org.scala-lang#scala-library;2.10.5[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-core_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-core_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-core_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-core_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-core_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->master][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-effect_2.10;7.1.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalaz#scalaz-effect_2.10;7.1.0 {compile=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-effect_2.10;7.1.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scalaz#scalaz-effect_2.10;7.1.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-effect_2.10/7.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-effect_2.10/7.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.scalaz#scalaz-effect_2.10;7.1.0[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-effect_2.10/7.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-effect_2.10/7.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.scalaz#scalaz-effect_2.10;7.1.0[0m
-[0m[[0mdebug[0m] [0m		tried /home/zafar/.ivy2/local/org.scalaz/scalaz-effect_2.10/7.1.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalaz#scalaz-effect_2.10;7.1.0[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scalaz#scalaz-effect_2.10;7.1.0[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom (7.1.0)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalaz#scalaz-effect_2.10;7.1.0!scalaz-effect_2.10.pom(pom.original) (58ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-effect_2.10/7.1.0/bundles/scalaz-effect_2.10.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-effect_2.10/7.1.0/bundles/scalaz-effect_2.10.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-effect_2.10/7.1.0/bundles/scalaz-effect_2.10.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-effect_2.10/7.1.0/bundles/scalaz-effect_2.10.jar[0m
-[0m[[0mdebug[0m] [0m		tried /home/zafar/.ivy2/local/org.scalaz/scalaz-effect_2.10/7.1.0/bundles/scalaz-effect_2.10.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scalaz#scalaz-effect_2.10;7.1.0 in public[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->master][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalastyle#scalastyle_2.10;0.8.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalastyle#scalastyle_2.10;0.8.0 {compile=[default(compile)]}[0m
@@ -148,7 +25,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/0.8.0/scalastyle_2.10-0.8.0.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/0.8.0/scalastyle_2.10-0.8.0.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/0.8.0/scalastyle_2.10-0.8.0.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalastyle#scalastyle_2.10;0.8.0!scalastyle_2.10.pom(pom.original) (59ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalastyle#scalastyle_2.10;0.8.0!scalastyle_2.10.pom(pom.original) (115ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle_2.10/0.8.0/jars/scalastyle_2.10.jar[0m
 [0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle_2.10/0.8.0/jars/scalastyle_2.10.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle_2.10/0.8.0/jars/scalastyle_2.10.jar[0m
@@ -159,7 +36,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.5 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m	[2.10.5] org.scala-lang#scala-library;2.10.5[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalariform#scalariform_2.10;0.1.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalariform#scalariform_2.10;0.1.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -180,7 +64,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.7/scalariform_2.10-0.1.7.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.7/scalariform_2.10-0.1.7.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.7/scalariform_2.10-0.1.7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalariform#scalariform_2.10;0.1.7!scalariform_2.10.pom(pom.original) (56ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalariform#scalariform_2.10;0.1.7!scalariform_2.10.pom(pom.original) (114ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.1.7/jars/scalariform_2.10.jar[0m
 [0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.1.7/jars/scalariform_2.10.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/scalariform_2.10/0.1.7/jars/scalariform_2.10.jar[0m
@@ -215,7 +99,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/config/1.2.0/config-1.2.0.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/config/1.2.0/config-1.2.0.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/typesafe/config/1.2.0/config-1.2.0.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.typesafe#config;1.2.0!config.pom(pom.original) (61ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.typesafe#config;1.2.0!config.pom(pom.original) (133ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe/config/1.2.0/bundles/config.jar[0m
 [0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe/config/1.2.0/bundles/config.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe/config/1.2.0/bundles/config.jar[0m
@@ -253,7 +137,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.10/2.2.1/scalaj-http_2.10-2.2.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.10/2.2.1/scalaj-http_2.10-2.2.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.10/2.2.1/scalaj-http_2.10-2.2.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalaj#scalaj-http_2.10;2.2.1!scalaj-http_2.10.pom(pom.original) (54ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalaj#scalaj-http_2.10;2.2.1!scalaj-http_2.10.pom(pom.original) (122ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalaj/scalaj-http_2.10/2.2.1/jars/scalaj-http_2.10.jar[0m
 [0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalaj/scalaj-http_2.10/2.2.1/jars/scalaj-http_2.10.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaj/scalaj-http_2.10/2.2.1/jars/scalaj-http_2.10.jar[0m
@@ -288,7 +172,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] commons-codec#commons-codec;1.10!commons-codec.pom(pom.original) (132ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] commons-codec#commons-codec;1.10!commons-codec.pom(pom.original) (121ms)[0m
 [0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;35 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.commons#commons-parent;35 {}[0m
 [0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;35 ...[0m
@@ -308,7 +192,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-parent/35/commons-parent-35.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-parent/35/commons-parent-35.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/commons/commons-parent/35/commons-parent-35.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-parent;35!commons-parent.pom(pom.original) (91ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-parent;35!commons-parent.pom(pom.original) (189ms)[0m
 [0m[[0minfo[0m] [0mResolving org.apache#apache;15 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache#apache;15 {}[0m
 [0m[[0minfo[0m] [0mResolving org.apache#apache;15 ...[0m
@@ -328,7 +212,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/apache/15/apache-15.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/apache/15/apache-15.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/apache/15/apache-15.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache#apache;15!apache.pom(pom.original) (65ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache#apache;15!apache.pom(pom.original) (110ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache/apache/15/jars/apache.jar[0m
 [0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache/apache/15/jars/apache.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache/apache/15/jars/apache.jar[0m
@@ -373,7 +257,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-lang3;3.4!commons-lang3.pom(pom.original) (70ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-lang3;3.4!commons-lang3.pom(pom.original) (153ms)[0m
 [0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;37 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.commons#commons-parent;37 {}[0m
 [0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;37 ...[0m
@@ -393,7 +277,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-parent/37/commons-parent-37.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-parent/37/commons-parent-37.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/commons/commons-parent/37/commons-parent-37.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-parent;37!commons-parent.pom(pom.original) (73ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-parent;37!commons-parent.pom(pom.original) (129ms)[0m
 [0m[[0minfo[0m] [0mResolving org.apache#apache;16 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache#apache;16 {}[0m
 [0m[[0minfo[0m] [0mResolving org.apache#apache;16 ...[0m
@@ -413,7 +297,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/apache/16/apache-16.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/apache/16/apache-16.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/apache/16/apache-16.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache#apache;16!apache.pom(pom.original) (68ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache#apache;16!apache.pom(pom.original) (107ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache/apache/16/jars/apache.jar[0m
 [0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache/apache/16/jars/apache.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache/apache/16/jars/apache.jar[0m
@@ -438,9 +322,161 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 {compile=[default(compile)]}[0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: found md file for com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0[0m
+[0m[[0mdebug[0m] [0m		=> https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml (4.0.0)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0!ivy.xml(ivy.original) (757ms)[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 in sbt-plugin-releases[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-core_2.10;7.1.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalaz#scalaz-core_2.10;7.1.0 {compile=[default(compile)]}[0m
+[0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-core_2.10;7.1.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scalaz#scalaz-core_2.10;7.1.0 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-core_2.10/7.1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-core_2.10/7.1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.scalaz#scalaz-core_2.10;7.1.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-core_2.10/7.1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-core_2.10/7.1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.scalaz#scalaz-core_2.10;7.1.0[0m
+[0m[[0mdebug[0m] [0m		tried /home/zafar/.ivy2/local/org.scalaz/scalaz-core_2.10/7.1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalaz#scalaz-core_2.10;7.1.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scalaz#scalaz-core_2.10;7.1.0[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom (7.1.0)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalaz#scalaz-core_2.10;7.1.0!scalaz-core_2.10.pom(pom.original) (116ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-core_2.10/7.1.0/bundles/scalaz-core_2.10.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-core_2.10/7.1.0/bundles/scalaz-core_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-core_2.10/7.1.0/bundles/scalaz-core_2.10.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-core_2.10/7.1.0/bundles/scalaz-core_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried /home/zafar/.ivy2/local/org.scalaz/scalaz-core_2.10/7.1.0/bundles/scalaz-core_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scalaz#scalaz-core_2.10;7.1.0 in public[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-core_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-core_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-core_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-core_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-effect_2.10;7.1.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalaz#scalaz-effect_2.10;7.1.0 {compile=[default(compile)]}[0m
+[0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-effect_2.10;7.1.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scalaz#scalaz-effect_2.10;7.1.0 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-effect_2.10/7.1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-effect_2.10/7.1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.scalaz#scalaz-effect_2.10;7.1.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-effect_2.10/7.1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-effect_2.10/7.1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.scalaz#scalaz-effect_2.10;7.1.0[0m
+[0m[[0mdebug[0m] [0m		tried /home/zafar/.ivy2/local/org.scalaz/scalaz-effect_2.10/7.1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalaz#scalaz-effect_2.10;7.1.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scalaz#scalaz-effect_2.10;7.1.0[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom (7.1.0)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalaz#scalaz-effect_2.10;7.1.0!scalaz-effect_2.10.pom(pom.original) (153ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-effect_2.10/7.1.0/bundles/scalaz-effect_2.10.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalaz/scalaz-effect_2.10/7.1.0/bundles/scalaz-effect_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-effect_2.10/7.1.0/bundles/scalaz-effect_2.10.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalaz/scalaz-effect_2.10/7.1.0/bundles/scalaz-effect_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried /home/zafar/.ivy2/local/org.scalaz/scalaz-effect_2.10/7.1.0/bundles/scalaz-effect_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scalaz#scalaz-effect_2.10;7.1.0 in public[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaz#scalaz-effect_2.10;7.1.0->org.scalaz#scalaz-core_2.10;7.1.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->runtime][0m
@@ -485,46 +521,46 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->runtime][0m
@@ -569,42 +605,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'provided'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [provided->default(compile)][0m
@@ -1475,6 +1475,42 @@
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [compile-internal][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->runtime][0m
@@ -1519,42 +1555,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [provided->default(compile)][0m
@@ -2199,6 +2199,42 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [runtime-internal][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->runtime][0m
@@ -2243,48 +2279,48 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [test-internal][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-core_2.10;7.1.0 [compile->runtime][0m
@@ -2329,42 +2365,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0->org.scalaz#scalaz-effect_2.10;7.1.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#example-build;0.1-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [provided->default(compile)][0m
@@ -3056,61 +3056,61 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#example-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/jars/sbteclipse-plugin.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/jars/sbteclipse-plugin.jar ...[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/jars/sbteclipse-plugin.jar[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/jars/sbteclipse-plugin.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/jars/sbteclipse-plugin.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0!sbteclipse-plugin.jar (1027ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/0.8.0/scalastyle_2.10-0.8.0.jar[0m
 [0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/0.8.0/scalastyle_2.10-0.8.0.jar ...[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/0.8.0/scalastyle_2.10-0.8.0.jar[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/0.8.0/scalastyle_2.10-0.8.0.jar.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/0.8.0/scalastyle_2.10-0.8.0.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalastyle#scalastyle_2.10;0.8.0!scalastyle_2.10.jar (360ms)[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalastyle#scalastyle_2.10;0.8.0!scalastyle_2.10.jar (238ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.10/2.2.1/scalaj-http_2.10-2.2.1.jar[0m
 [0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.10/2.2.1/scalaj-http_2.10-2.2.1.jar ...[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.10/2.2.1/scalaj-http_2.10-2.2.1.jar[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.10/2.2.1/scalaj-http_2.10-2.2.1.jar.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.10/2.2.1/scalaj-http_2.10-2.2.1.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalaj#scalaj-http_2.10;2.2.1!scalaj-http_2.10.jar (87ms)[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalaj#scalaj-http_2.10;2.2.1!scalaj-http_2.10.jar (113ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.jar[0m
 [0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.jar ...[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.jar[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.jar.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] commons-codec#commons-codec;1.10!commons-codec.jar (137ms)[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] commons-codec#commons-codec;1.10!commons-codec.jar (545ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar[0m
 [0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar ...[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-lang3;3.4!commons-lang3.jar (170ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalaz#scalaz-core_2.10;7.1.0!scalaz-core_2.10.jar(bundle) (3062ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalaz#scalaz-effect_2.10;7.1.0!scalaz-effect_2.10.jar(bundle) (217ms)[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-lang3;3.4!commons-lang3.jar (199ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/jars/sbteclipse-plugin.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/jars/sbteclipse-plugin.jar ...[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/jars/sbteclipse-plugin.jar[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/jars/sbteclipse-plugin.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/4.0.0/jars/sbteclipse-plugin.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0!sbteclipse-plugin.jar (759ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.5!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.7/scalariform_2.10-0.1.7.jar[0m
 [0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.7/scalariform_2.10-0.1.7.jar ...[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.7/scalariform_2.10-0.1.7.jar[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.7/scalariform_2.10-0.1.7.jar.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.7/scalariform_2.10-0.1.7.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalariform#scalariform_2.10;0.1.7!scalariform_2.10.jar (729ms)[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalariform#scalariform_2.10;0.1.7!scalariform_2.10.jar (288ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/typesafe/config/1.2.0/config-1.2.0.jar[0m
 [0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/typesafe/config/1.2.0/config-1.2.0.jar ...[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/config/1.2.0/config-1.2.0.jar[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/config/1.2.0/config-1.2.0.jar.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/typesafe/config/1.2.0/config-1.2.0.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe#config;1.2.0!config.jar(bundle) (148ms)[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe#config;1.2.0!config.jar(bundle) (139ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.1.0/scalaz-core_2.10-7.1.0.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalaz#scalaz-core_2.10;7.1.0!scalaz-core_2.10.jar(bundle) (1008ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.1.0/scalaz-effect_2.10-7.1.0.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalaz#scalaz-effect_2.10;7.1.0!scalaz-effect_2.10.jar(bundle) (171ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#sbt;0.13.9!sbt.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#main;0.13.9!main.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.9!compiler-interface-bin.jar[0m
@@ -3166,7 +3166,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.9!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.5!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 9761ms :: artifacts dl 5974ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 10315ms :: artifacts dl 3492ms[0m
 [0m[[0mdebug[0m] [0m	report for default#example-build;0.1-SNAPSHOT compile produced in /home/zafar/GitHub/Coursera/Scala/Week1/example/project/target/resolution-cache/reports/default-example-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#example-build;0.1-SNAPSHOT runtime produced in /home/zafar/GitHub/Coursera/Scala/Week1/example/project/target/resolution-cache/reports/default-example-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#example-build;0.1-SNAPSHOT test produced in /home/zafar/GitHub/Coursera/Scala/Week1/example/project/target/resolution-cache/reports/default-example-build-test.xml[0m
@@ -3180,5 +3180,5 @@
 [0m[[0mdebug[0m] [0m	report for default#example-build;0.1-SNAPSHOT docs produced in /home/zafar/GitHub/Coursera/Scala/Week1/example/project/target/resolution-cache/reports/default-example-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#example-build;0.1-SNAPSHOT pom produced in /home/zafar/GitHub/Coursera/Scala/Week1/example/project/target/resolution-cache/reports/default-example-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#example-build;0.1-SNAPSHOT scala-tool produced in /home/zafar/GitHub/Coursera/Scala/Week1/example/project/target/resolution-cache/reports/default-example-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (9761ms resolve - 5974ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (10315ms resolve - 3492ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
