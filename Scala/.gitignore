@@ -15,3 +15,7 @@ target/
 # Scala-IDE specific
 .scala_dependencies
 .worksheet
+
+# I don't want to save Intelli-J
+IdeaProjects
+.idea
