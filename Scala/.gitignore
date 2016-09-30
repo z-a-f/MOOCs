@@ -1,0 +1,28 @@
+*.class
+*.log
+
+# sbt specific
+.cache
+.history
+.lib/
+dist/*
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+target/
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
+scala-*
+
+# I don't want to save Intelli-J
+.idea/
+*.iml
+*.iws
+
+# Maven
+log/
+target/
+
