@@ -1,0 +1,30 @@
+<!-- h1>Find your Recipe!</h1 -->
+
+<form id="searchbox" method="get">
+    <input id="search" type="text" name="search" placeholder="Chocolate">
+    <input id="submit" type="submit" value="Search">
+</form>
+
+<% if @recipes.length > 0 %>
+
+<table border="1">
+	<tr>
+		<th>Image</th>
+		<th>Name</th>
+		<th>Description</th>
+	</tr>
+	<!-- Iterate through everything that was found -->
+	<% @recipes.each do |recipe| %>
+	  <tr class=<%= cycle("even", "odd") %>>
+      <td><%= link_to(image_tag(recipe["image_url"], size: "100x100"), recipe['f2f_url']) %></td>
+      <td><%= link_to(sanitize(recipe["title"]), recipe['f2f_url']) %></td>
+      <td><%= recipe["social_rank"] %></td>
+    </tr>
+	<% end %>
+</table>
+
+<% else %>
+
+<div class="notFound">Sorry, nothing found</div>
+
+<% end %>
