@@ -1,0 +1,8 @@
+Fri, 21 Oct 2016 12:08:04 -0700
+README.rdoc	Fri, 21 Oct 2016 12:03:40 -0700
+app/controllers/application_controller.rb	Fri, 21 Oct 2016 12:03:40 -0700
+app/controllers/cars_controller.rb	Fri, 21 Oct 2016 12:03:40 -0700
+app/helpers/application_helper.rb	Fri, 21 Oct 2016 12:03:40 -0700
+app/helpers/cars_helper.rb	Fri, 21 Oct 2016 12:03:40 -0700
+app/models/car.rb	Fri, 21 Oct 2016 12:03:40 -0700
+app/models/person.rb	Fri, 21 Oct 2016 12:03:40 -0700
