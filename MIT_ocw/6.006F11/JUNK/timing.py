@@ -15,6 +15,9 @@ import string
 import sys
 import timeit
 
+
+f_list_all = ("n**3", "n**2", "n**lg(3)", "n*lg(n)", "lg(n)", "n","1")
+
 # Parameter generation routines
 
 def lg(x):
@@ -158,6 +161,7 @@ def test_misc():
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
     f_list = ("1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -173,8 +177,9 @@ def test_number():
     growth_factor = 2
     print "Spec_string: ",spec_string,"by factors of",growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
-    # f_list = ("n**2","n","1")
-    f_list = ("n**2",)
+    f_list = ("n**2","n","1")
+    # f_list = ("n**2","1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -188,8 +193,9 @@ def test_number():
     growth_factor = 2
     print "Spec_string: ",spec_string,"by factors of",growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
-    # f_list = ("n**2","n","1")
-    f_list = ("n**2",)
+    f_list = ("n**2","n","1")
+    # f_list = ("n**2","1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -203,8 +209,9 @@ def test_number():
     growth_factor = 2
     print "Spec_string: ",spec_string,"by factors of",growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
-    # f_list = ("n**2","n","1")
-    f_list = ("n",)
+    f_list = ("n**2","n","1")
+    # f_list = ("n","1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -219,7 +226,8 @@ def test_number():
     print "Spec_string: ",spec_string,"by factors of",growth_factor
     var_list,param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n**2","n*lg(n)","n","1")
-    f_list = ("n",)
+    f_list = ("n","1",)
+    # f_list = f_list_all
     run_times = []
     trials = 10000
     for D in param_list:
@@ -235,7 +243,8 @@ def test_number():
     print "Spec_string: ",spec_string,"by factors of",growth_factor
     var_list,param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n**2","n*lg(n)","n","1")
-    f_list = ("n**1.585",)
+    f_list = ("n**1.585","1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -250,7 +259,8 @@ def test_number():
     print "Spec_string: ",spec_string,"by factors of",growth_factor
     var_list,param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n**2","n*lg(n)","n","1")
-    f_list = ("n**2",)
+    f_list = ("n**2","1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -265,7 +275,8 @@ def test_number():
     print "Spec_string: ",spec_string,"by factors of",growth_factor
     var_list,param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n**2","n*lg(n)","n","1")
-    f_list = ("n**2",)
+    f_list = ("n**2","1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -280,7 +291,8 @@ def test_number():
     print "Spec_string: ",spec_string,"by factors of",growth_factor
     var_list,param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n**2","n*lg(n)","n","1")
-    f_list = ("n**3",)
+    f_list = ("n**3","1",)
+    # f_list = f_list_all
     run_times = []
     trials = 10
     for D in param_list:
@@ -296,6 +308,7 @@ def test_number():
     var_list,param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n**2","n*lg(n)","n","1")
     f_list = ("1",)
+    # f_list = f_list_all
     run_times = []
     trials = 10000
     for D in param_list:
@@ -312,6 +325,7 @@ def test_string():
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
     f_list = ("1",)
+    #f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -326,7 +340,8 @@ def test_string():
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
-    f_list = ("n",)
+    f_list = ("n","1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -341,7 +356,8 @@ def test_string():
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
-    f_list = ("n",)
+    f_list = ("n","1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -356,7 +372,8 @@ def test_string():
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
-    f_list = ("n",)
+    f_list = ("n","1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -374,6 +391,7 @@ def test_list():
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
     f_list = ("1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -389,6 +407,7 @@ def test_list():
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
     f_list = ("1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -404,6 +423,7 @@ def test_list():
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
     f_list = ("1")
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -419,6 +439,7 @@ def test_list():
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
     f_list = ("1",)
+    # f_list = f_list_all
     run_times = []
     trials = 200
     for D in param_list:
@@ -433,7 +454,8 @@ def test_list():
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
-    f_list = ("n",)
+    f_list = ("n","1")
+    # f_list = f_list_all
     run_times = []
     trials = 2000
     for D in param_list:
@@ -448,7 +470,8 @@ def test_list():
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
-    f_list = ("n",)
+    f_list = ("n","1")
+    # f_list = f_list_all
     run_times = []
     trials = 2000
     for D in param_list:
@@ -463,7 +486,8 @@ def test_list():
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
-    f_list = ("n",)
+    f_list = ("n","1")
+    # f_list = f_list_all
     run_times = []
     trials = 2000
     for D in param_list:
@@ -477,8 +501,9 @@ def test_list():
     growth_factor = 2
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
-    # f_list = ("n","1")
-    f_list = ("n",)
+    f_list = ("n","1")
+    # f_list = ("n")
+    # f_list = f_list_all
     run_times = []
     trials = 2000
     for D in param_list:
@@ -492,8 +517,9 @@ def test_list():
     growth_factor = 2
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
-    # f_list = ("n","1")
-    f_list = ("n",)
+    f_list = ("n","1")
+    # f_list = ("n")
+    # f_list = f_list_all
     run_times = []
     trials = 200
     for D in param_list:
@@ -507,8 +533,9 @@ def test_list():
     growth_factor = 2
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
-    # f_list = ("n","1")
-    f_list = ("n",)
+    f_list = ("n","1")
+    # f_list = ("n")
+    # f_list = f_list_all
     run_times = []
     trials = 200
     for D in param_list:
@@ -523,7 +550,8 @@ def test_list():
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
-    f_list = ("n*lg(n)",)
+    f_list = ("n*lg(n)","1")
+    # f_list = f_list_all
     run_times = []
     trials = 200
     for D in param_list:
@@ -540,6 +568,7 @@ def test_dict():
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
     f_list = ("1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -553,8 +582,9 @@ def test_dict():
     growth_factor = 2
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
-    # f_list = ("n","1")
-    f_list = ("1",)
+    f_list = ("n","1")
+    # f_list = ("1",)
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -570,7 +600,8 @@ def test_dict():
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
-    f_list = ("n",)
+    f_list = ("n","1")
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
@@ -586,7 +617,9 @@ def test_dict():
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
-    f_list = ("n*lg(n)",)
+    # f_list = ("n*lg(n)", "1")
+    f_list = ("n*lg(n)","n", "1")
+    # f_list = f_list_all
     run_times = []
     trials = 1000
     for D in param_list:
