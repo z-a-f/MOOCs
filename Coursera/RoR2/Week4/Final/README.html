@@ -1,0 +1,451 @@
+<h2 id="assignment-for-module-4-nested-resources-security-and-pagination">Assignment for Module #4: Nested Resources, Security, and Pagination</h2>
+<p>The overall goal of this assignment is to assess your ability to implement:</p>
+<ul>
+<li>Nested resources</li>
+<li>Authenication</li>
+<li>Authorization</li>
+<li>Pagination</li>
+</ul>
+<p>The functional goal of this assignment to implement a web application to manage TodoItems.</p>
+<h3 id="functional-requirements">Functional Requirements</h3>
+<ol style="list-style-type: decimal">
+<li><p>Start with the application completed in module 2. This will have defined all the models and relationships required for this assignment:</p>
+<ul>
+<li>User</li>
+<li>TodoList</li>
+<li>TodoItem</li>
+</ul>
+<p>An Entity Relationship (ER) diagram is provided below to help depict each Model's relationship:</p>
+<pre><code>+------+ 1    * +----------+ 1    * +----------+
+| User |--------| TodoList |--------| TodoItem | 
++------+        +----------+        +----------+</code></pre>
+<p>We will not be using the optional <code>Profile</code> model class in this assignment.</p></li>
+<li><p>Implement access to <code>TodoItem</code> as a nested resource of <code>TodoList</code></p></li>
+<li><p>Lock down the application to only authenticated users.</p></li>
+<li><p>Limit access to resources associated with the logged in user.</p></li>
+<li><p>Access unbounded collections of resources using pagination.</p></li>
+</ol>
+<h3 id="getting-started">Getting Started</h3>
+<ol style="list-style-type: decimal">
+<li><p>Start with a copy of your <code>todolists</code> solution from the module 2 assignment</p></li>
+<li><p>From your <code>todolists</code> application root directory, remove the unit test from module 2.</p>
+<pre class="shell"><code>`-- spec
+    `-- assignment_spec.rb</code></pre>
+<pre class="shell"><code>$ rm spec/assignment_spec.rb</code></pre></li>
+<li><p>Download and extract the starter set of boostrap files for this assignment.</p>
+<pre class="shell"><code>|-- Gemfile
+|-- db
+|    `-- seeds.rb
+`-- spec
+     -- start.rb
+     -- nested_resources.rb
+     -- security.rb
+     -- authorization.rb
+     -- authentication.rb
+     -- pagination.rb
+     -- end2end.rb</code></pre>
+<ul>
+<li><p>Overwrite your existing Gemfile with the Gemfile from the bootstrap fileset. They should be nearly identical, but this is done to make sure the gems and versions you use in your solution can be processed by the automated Grader when you submit. Any submission should be tested with this version of the file.</p>
+<p>NOTE the Gemfile includes a section added for the last assignment:</p>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">group <span class="st">:test</span> <span class="kw">do</span>
+    gem <span class="st">&#39;rspec-rails&#39;</span>, <span class="st">&#39;~&gt; 3.0&#39;</span>
+    gem <span class="st">&#39;capybara&#39;</span>
+<span class="kw">end</span></code></pre></div>
+<p>as well as a new definition for the following items:</p>
+<ul>
+<li><code>bcrypt</code> gem uncommented for use with <code>has_secure_password</code></li>
+<li><code>tzinfo-data</code> gem conditionally included on Windows platforms</li>
+<li><p><code>will_paginate</code> added for implementing paging</p>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="co"># Use ActiveModel has_secure_password</span>
+gem <span class="st">&#39;bcrypt&#39;</span>, <span class="st">&#39;~&gt; 3.1.7&#39;</span>
+
+<span class="co"># Windows does not include zoneinfo files, so bundle the tzinfo-data gem</span>
+gem <span class="st">&#39;tzinfo-data&#39;</span>, platforms: [<span class="st">:mingw</span>, <span class="st">:mswin</span>, <span class="st">:x64_mingw</span>, <span class="st">:jruby</span>]
+
+gem <span class="st">&#39;will_paginate&#39;</span>, <span class="st">&#39;~&gt; 3.0.6&#39;</span></code></pre></div></li>
+</ul></li>
+<li><p>Overwrite your existing <code>db/seeds.rb</code> file from the bootstrap fileset. This file contains some test data that will be useful during development and unit tests.</p></li>
+<li><p>Add the <code>spec/*.rb</code> files provided with the bootstrap fileset to the corresponding <code>spec/</code> directory within your <code>todolists</code> application. These files contain tests that will help determine whether you have completed the assignment.</p></li>
+</ul></li>
+<li><p>Run the <code>bundle</code> command to make sure all gems are available.</p>
+<pre class="shell"><code>$ bundle</code></pre></li>
+<li><p>Run the rspec test(s) to receive feedback. <code>rspec</code> must be run from the root directory of your application. There are several test files provided for this assignment. Many of those files are designed to test your code at specific points as you proceed through the technical requirements of this assignment. As such, many tests will fail if executed after additional technical requirements have been completed. Initially, majority of tests will (obviously) fail until you complete the requirements necessary for them to pass.</p>
+<pre class="shell"><code>$ rspec 
+...
+(N) examples, 1 failure, (N) pending</code></pre>
+<p>To focus test feedback on a specific step of the requirements, add the specific file (path included) with the tests along with &quot;-e rq##&quot; to the rspec command line to only evaluate a specific requirement. Pad all step numbers to two digits.</p>
+<pre class="shell"><code>$ rspec spec/start_spec.rb -e rq1.0
+...
+(N) example, 0 failures</code></pre></li>
+<li><p>Implement your solution to the technical requirements and use the rspec tests to help verify your completed solution.</p></li>
+<li><p>Submit your Rails app solution for grading.</p></li>
+</ol>
+<h3 id="technical-requirements">Technical Requirements</h3>
+<ol style="list-style-type: decimal">
+<li><p>Starting with a copy of your module 2 solution, this solution should already have <code>User</code>, <code>TodoList</code>, and <code>TodoItem</code> models defined with the following properties and relationships. This assignment does not use the <code>Profile</code> model class but it will not hurt to include it.</p>
+<ul>
+<li>User
+<ul>
+<li>username - a string to hold account identity</li>
+<li>password_digest - a string to hold password information</li>
+<li>todo_lists - a 1:many relationship with <code>TodoList</code> (i.e., User <code>has_many</code> todo_lists).</li>
+</ul>
+<p>Add appropriate options to have the <code>User</code> model class delete a <code>TodoList</code> in a cascading fashion</p></li>
+<li>TodoList
+<ul>
+<li>list_name - a string name assigned to the list</li>
+<li>list_due_date - a date when todo items in the list are to be complete. This is a date. We are not concerned with the time of day.</li>
+<li>user - a many:1 relationship with <code>User</code> (i.e., TodoList <code>belongs_to</code> User)</li>
+<li>todo_items - a 1:many relationship with <code>TodoItem</code> (i.e., TodoList <code>has_many</code> todo_items).</li>
+</ul>
+<p>Add appropriate options to have the <code>TodoList</code> model class delete a <code>TodoItem</code> in a cascading fashion</p></li>
+<li>TodoItem
+<ul>
+<li>due_date - date when the specific task is to be complete</li>
+<li>title - a string with short name for specific task</li>
+<li>description - a string with narrative text for specific task</li>
+<li>completed - a boolean value (default=false), indicating whether item is complete</li>
+<li>todo_list - a many:1 relationship with TodoList - TodoItem belongs_to TodoList</li>
+</ul>
+<pre class="shell"><code>$ rake db:migrate
+$ rspec spec/start_spec.rb</code></pre></li>
+</ul></li>
+<li><p>Add <code>has_secure_password</code> to the <code>User</code> model class. This will define a <code>password</code> property that will get processed into an encrypted hash stored in the <code>password_digest</code> database column. We won't use this capability immediately -- but it is necessary to define it early in the assignment so that the data model works with the <code>db/seeds.rb</code> file in the next step.</p>
+<pre class="shell"><code>$ rspec spec/security_spec.rb -e rq02</code></pre></li>
+<li><p>Seed the database with the <code>db/seeds.rb</code> file. This will load sample <code>Users</code>, <code>TodoLists</code>, and <code>TodoItems</code>. If this loads correctly -- your models and database are setup correctly and you are ready to start accessing the data through web pages produced by the controller and views.</p>
+<pre class="shell"><code>$ rake db:seed
+$ rails c
+&gt; User.first.todo_lists.count
+ =&gt; (N&gt;0)</code></pre></li>
+<li><p>Use the <code>rails g scaffold_controller</code> command to create controller and view artifacts for <code>TodoLists</code> and <code>TodoItems</code>.</p>
+<pre class="shell"><code>$ rails g scaffold_controller TodoList list_name list_due_date:date
+$ rails g scaffold_controller TodoItem title due_date:date description:text completed:boolean</code></pre>
+<p>Update <code>config/routes.rb</code> to</p>
+<ul>
+<li>Access <code>:todo_list</code> resources at URI <code>/todo_lists</code></li>
+<li>Access <code>:todo_item</code> resources at URI <code>/todo_lists/:todo_list_id/todo_items</code></li>
+<li>Make the <code>todo_list#index</code> action the root of the application</li>
+</ul>
+<p>(Hint: refer to module 4, lesson 1, lecture:<code>Nested Resources: Part1</code> for details on how this is done)</p>
+<p>At this point, <code>TodoList</code> is defined as a global resource (with a root-level URI) and <code>TodoItem</code> is defined as a nested resource, always scoped below the <code>TodoList</code> it belongs to. Our application is not written to work that way, so expect some errors as we begin the modifications.</p>
+<p>If you have not yet done so -- please start the server and also take a look at your defined URI routes.</p>
+<pre class="shell"><code>$ rails s   #in separate console</code></pre>
+<pre class="shell"><code>$ rake routes   #in original console
+$ rspec spec/nested_resources_spec.rb -e rq04</code></pre></li>
+<li><p>Update the <code>TodoList</code> to display <code>TodoItems</code> as a nested resource in the <code>todo_list#show</code> page (<code>todo_lists/show.html.erb</code>).</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Copy the table from the <code>todo_items#index</code> page (<code>index.html.erb</code>) and paste the table into the <code>todo_lists#show</code> page (<code>todo_lists/show.html.erb</code>)</p></li>
+<li><p>Change global <code>@todo_items</code> references to scoped <code>@todo_list.todo_items</code> references below:</p></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">from: <span class="er">&lt;</span>% @todo_items.each do |todo_item| %&gt;
+to:   <span class="er">&lt;</span>% @todo_list.todo_items.each do |todo_item| %&gt;</code></pre></div>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><p>Remove the <code>Edit</code> link for <code>TodoItems</code></p></li>
+<li><p>Change the link_to parameters from global <code>todo_item</code> references to provide fully qualified <code>[@todo_list, todo_item]</code> references as an array.</p></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">from: <span class="kw">&lt;td&gt;</span><span class="er">&lt;</span>%= link_to &#39;Show&#39;, todo_item %&gt;<span class="kw">&lt;/td&gt;</span>
+to:   <span class="kw">&lt;td&gt;</span><span class="er">&lt;</span>%= link_to &#39;Show&#39;, [@todo_list, todo_item] %&gt;<span class="kw">&lt;/td&gt;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">from: <span class="kw">&lt;td&gt;</span><span class="er">&lt;</span>%= link_to &#39;Destroy&#39;, todo_item, method: :delete, data: ...
+to:   <span class="kw">&lt;td&gt;</span><span class="er">&lt;</span>%= link_to &#39;Destroy&#39;, [@todo_list, todo_item], method: :delete, data: ...</code></pre></div>
+<pre class="shell"><code>$ rspec spec/nested_resources_spec.rb -e rq05b</code></pre>
+<p>NOTE: This test case is for incremental testing only and WILL FAIL after authentication infrastructure is in place later in this assignment.</p>
+<pre class="shell"><code>$ rspec spec/nested_resources_spec.rb -e rq05d</code></pre>
+<p>NOTE: This test case is for incremental testing only and WILL FAIL after authentication infrastructure is in place later in this assignment.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Add a link to create a 'New Todo Item'. (hint: Use the <code>link_to</code> and <code>new_todo_list_todo_item_path(@todo_list)</code> helpers to produce a link tag)</li>
+</ol>
+<pre class="shell"><code>$ rspec spec/nested_resources_spec.rb -e rq05e</code></pre>
+<p>Note how the <code>new_todo_list_todo_item_path(@todo_list)</code> is formed from what is produced in <code>rake routes</code>.</p>
+<pre><code>$ rake routes
+new_todo_list_todo_item GET /todo_lists/:todo_list_id/todo_items/new(.:format) todo_items#new</code></pre>
+<ul>
+<li>we want to invoke <code>todo_items#new</code> when we create a new <code>TodoItem</code></li>
+<li>that action is mapped to using the <code>/todo_lists/:todo_list_id/todo_items/new(.:format)</code> URI and GET method. We are required to supply a :todo_list_id</li>
+<li><code>new_todo_list_todo_item_path</code> is formed by adding <code>_path</code> to <code>new_todo_list_todo_item</code></li>
+<li>the :todo_list_id is filled in by passing in a <code>@todo_list</code> when calling it</li>
+<li>GET is provided by <code>new_todo_list_todo_item_path</code></li>
+</ul>
+<p>Notice that the <code>TodoItems</code> now display on the <code>todo_list#show</code> page by navigating to a specific <code>TodoList</code>. However, the <code>TodoItem</code> URIs are not yet implemented in the <code>TodoItem</code> controller (next step).</p>
+<pre class="shell"><code>$ rspec spec/nested_resources_spec.rb -e rq05</code></pre></li>
+<li><p>Modify the <code>TodoItem</code> controller to work as a nested resource by implementing the following. Note that your views with <code>TodoItem</code> URI references will not work until these changes are made and the links and forms are updated to include the scoping <code>TodoList</code> for each referenced <code>TodoItem</code>. The unit tests, however, will be able to make calls into your back-end to determine all URIs are implemented properly -- prior to moving on to the views.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Remove the old URI comments or replace them to have the following form since all calls to a <code>TodoItem</code> will now be scoped below a <code>TodoList</code>. Use the todo_item output of <code>rake routes</code> to give you a head start.</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">$ rake routes
+<span class="co">#METHOD /todo_list/:todo_list_id/todo_items</span>
+<span class="co">#METHOD /todo_list/:todo_list_id/todo_items/:id</span></code></pre></div>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>Remove the <code>todo_item#index</code> method and <code>views/todo_items/index</code> pages. This will no longer be called since all <code>TodoItem</code> displays will be scoped to a particular <code>TodoList</code>. We will get the <code>TodoList</code> and call <code>todo_list.todo_items()</code> instead.</p></li>
+<li><p>Add a private helper method called <code>set_todo_list</code> that sets the <code>@todo_list</code> instance variable from the <code>:todo_list_id</code> property passed in via the params. (Hint: try the following in the <code>rails console</code> if you need practice locating a TodoList by id)</p></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">$ rails c
+&gt; list_id=<span class="dt">TodoList</span>.first.id
+&gt; <span class="ot">@todo_list</span>=<span class="dt">TodoList</span>.find(list_id)</code></pre></div>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Update the private helper method called <code>set_todo_item</code> to scope its find command to the <code>todo_items</code> of a specific <code>@todo_list</code> list. (Hint: try the following in the <code>rails console</code> if you need practice locating a <code>TodoItem</code> by id scoped to a <code>TodoList</code>)</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">$ rails c
+&gt; list_id=<span class="dt">TodoList</span>.first.id
+&gt; <span class="ot">@todo_list</span>=<span class="dt">TodoList</span>.find(list_id)
+&gt; item_id=<span class="ot">@todo_list</span>.todo_items.first.id
+&gt; <span class="ot">@todo_item</span>=<span class="ot">@todo_list</span>.todo_items.find(item_id)</code></pre></div>
+<ol start="5" style="list-style-type: lower-alpha">
+<li><p>Invoke the <code>set_todo_list</code> method before each method in the controller is executed using a <code>before_action</code></p></li>
+<li><p>Update the <code>todo_item#new</code> action to return a new <code>TodoItem</code> instance that is initialized to reference its parent <code>@todo_list</code>, which is provided by <code>set_todo_list</code>.<br />(Hint: try the following the <code>rails console</code> if you need practice creating a new instance of a <code>TodoItem</code> associated with a <code>TodoList</code>. Notice the new TodoItem is never saved to the database during this call. However, what is passed back to the form is a TodoItem prototype that has its foreign key reference set to the <code>TodoList</code> so that <code>TodoList</code> can be referenced when the <code>TodoItem</code> is finally created in a follow-on POST)</p></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">$ rails c
+&gt; <span class="ot">@todo_list</span>=<span class="dt">TodoList</span>.first
+&gt; <span class="ot">@todo_item</span>=<span class="ot">@todo_list</span>.todo_items.new</code></pre></div>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>Update the <code>todo_item#create</code> to create a new <code>TodoItem</code> instance based on the <code>todo_item_params</code> as before. Except now create this instance associated with the <code>@todo_list</code> provided by <code>set_todo_list</code>. (Hint: try the following in the <code>rails console</code> if you need practice creating a new instance of a <code>TodoItem</code> associated with a <code>TodoList</code>. Notice that in this case -- <code>save()</code> is being called on the <code>todo_list</code>, causing the new <code>TodoItem</code> to be inserted into the database.)</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">$ rails c
+&gt; <span class="ot">@todo_list</span>=<span class="dt">TodoList</span>.first
+&gt; <span class="ot">@todo_item</span>=<span class="ot">@todo_list</span>.todo_items.new(title:<span class="st">&quot;my item&quot;</span>)
+&gt; <span class="ot">@todo_list</span>.save()</code></pre></div>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>Update the HTML redirect of the <code>todo_item#create</code>, <code>todo_item#update</code>, and <code>todo_item#destroy</code> methods to do to the <code>todo_list#index</code> page. (Hint: use the <code>@todo_list</code> variable within <code>redirect_to</code> to express the <code>todo_list#index</code> page URI)</li>
+</ol></li>
+<li><p>Update <code>TodoList</code> and <code>TodoItem</code> views to adjust the links and forms in these views to work with the updated URIs and <code>TodoItem</code> controller.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Update the links on the <code>todo_items#show</code> page (<code>todo_items/show.html.erb</code>) to include the <code>TodoList</code> the <code>TodoItem</code> is a member of.</li>
+</ol>
+<ul>
+<li><p>Change the <code>Edit</code> link_to path parameter from the global <code>edit_todo_item_path</code> (that no longer exists) to the new <code>edit_todo_list_todo_item_path</code>. This new method requires both <code>@todo_list</code> and `todo_item' passed in as separate arguments (not as an array -- as in previous requirement).</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">from: <span class="er">&lt;</span>%= link_to &#39;Edit&#39;, edit_todo_item_path(@todo_item) %&gt; |
+to:   <span class="er">&lt;</span>%= link_to &#39;Edit&#39;, edit_todo_list_todo_item_path(@todo_list, @todo_item) %&gt; |</code></pre></div></li>
+<li><p>Change the <code>Back</code> link_to path parameter from to global <code>edit_items_path</code> (that no longer exists) to the <code>todo_listi#show</code> page it is a member of. This requires using the <code>@todo_list</code>.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">from: <span class="er">&lt;</span>%= link_to &#39;Back&#39;, todo_items_path %&gt;
+to:   <span class="er">&lt;</span>%= link_to &#39;Back&#39;, @todo_list %&gt;</code></pre></div>
+<pre class="shell"><code>$ rspec spec/nested_resources_spec.rb -e rq07a</code></pre></li>
+</ul>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Update the links on the <code>todo_items#edit</code> page (<code>todo_items/edit.html.erb</code>) to include the <code>TodoList</code> the <code>TodoItem</code> is a member of.</li>
+</ol>
+<ul>
+<li><p>Change the <code>Show</code> link_to path parameter from a global <code>@todo_item</code> reference to include its <code>@todo_list</code>. This requires using both <code>@todo_list</code> and `<span class="citation">@todo_item</span>' passed in as separate arguments as an array.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">from: <span class="er">&lt;</span>%= link_to &#39;Show&#39;, @todo_item %&gt; |
+to:   <span class="er">&lt;</span>%= link_to &#39;Show&#39;, [@todo_list, @todo_item] %&gt; |</code></pre></div></li>
+<li><p>Change the <code>Back</code> link_to path parameter from a global <code>todo_items_path</code> (that no longer exists) to reference the <code>TodoList</code> it is a member of. This new method requires the <code>@todo_list</code> passed in as a single argument.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">from: <span class="er">&lt;</span>%= link_to &#39;Back&#39;, todo_items_path %&gt;
+to:   <span class="er">&lt;</span>%= link_to &#39;Back&#39;, @todo_list %&gt;</code></pre></div></li>
+</ul>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Update the form parameters on the <code>TodoItems</code> form partial page (<code>todo_items/_form.html.erb</code>) to include the <code>TodoList</code> the <code>TodoItem</code> is a member of.</li>
+</ol>
+<ul>
+<li><p>Change the link_to parameters from global <code>todo_item</code> references to provide fully qualified `<span class="citation">[@todo_list, @todo_item]</span>' references as an array.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">from: <span class="er">&lt;</span>%= form_for(@todo_item) do |f| %&gt;
+to:   <span class="er">&lt;</span>%= form_for([@todo_list, @todo_item]) do |f| %&gt;</code></pre></div>
+<pre class="shell"><code>$ rspec spec/nested_resources_spec.rb -e rq07c</code></pre></li>
+</ul>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Update the links on the <code>todo_items#new</code> page (<code>todo_items/new.html.erb</code>) to include the <code>TodoList</code>.</li>
+</ol>
+<ul>
+<li><p>change the <code>Back</code> link_to path parameter from a global <code>todo_items_path</code> (that no longer exists) to reference the <code>TodoList</code> it is a member of. This new method requires the <code>@todo_list</code> passed in as a single argument.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">from: <span class="er">&lt;</span>%= link_to &#39;Back&#39;, todo_items_path %&gt;
+to:   <span class="er">&lt;</span>%= link_to &#39;Back&#39;, @todo_list %&gt;</code></pre></div>
+<pre class="shell"><code>$ rspec spec/nested_resources_spec.rb -e rq07d</code></pre></li>
+</ul>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Make the display of <code>completed</code> conditional on the <code>todo_item</code> being edited versus new. Users should not be allowed to see/change the <code>completed</code> property for a new <code>TodoItem</code>. (Hint: edited objects are persisted and can be tested using <code>persisted?</code>. Objects can also be tested with <code>.new_record?</code>)</li>
+</ol>
+<pre class="shell"><code>$ rspec spec/nested_resources_spec.rb -e rq07e</code></pre>
+<pre class="shell"><code>$ rspec spec/nested_resources_spec.rb -e rq07</code></pre></li>
+<li><p>Verify that you have implemented a password login capability for the <code>User</code> model. You implemented this in an earlier step to allow the provided <code>db/seeds.rb</code> to immediately work with passwords. This this should just be a sanity check and review of how <code>has_secure_password</code> works.</p>
+<ul>
+<li><p>Using the <code>rails console</code>, verify that you fail authentication when using the wrong password for a specific <code>User</code>. You can locate the <code>username</code> and assigned <code>password</code> in the <code>db/seeds.rb</code> file.</p>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">$ rails c
+&gt; user=<span class="dt">User</span>.where(username:<span class="st">&quot;rich&quot;</span>).first
+&gt; user.authenticate(<span class="st">&quot;wrongpassword&quot;</span>)
+ =&gt; <span class="dv">false</span> </code></pre></div></li>
+<li><p>Using the <code>rails console</code>, verify that you can authenticate using a valid password for a specific <code>User</code>.</p>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">&gt; user=<span class="dt">User</span>.where(username:<span class="st">&quot;rich&quot;</span>).first
+&gt; user.authenticate(<span class="st">&quot;123abc&quot;</span>)
+ =&gt; <span class="co">#&lt;User id: 277, username: &quot;rich&quot;, password_digest: &quot;$2a...</span></code></pre></div></li>
+<li><p>Using the <code>rails console</code>, verify that you can authenticate and get the <code>TodoLists</code> for an authenticated <code>User</code>.</p>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">&gt; user=<span class="dt">User</span>.where(username:<span class="st">&quot;rich&quot;</span>).first
+&gt; user.authenticate(<span class="st">&quot;123abc&quot;</span>).todo_lists.count
+ =&gt; <span class="dv">49</span> <span class="co">#seed data randomly generated</span></code></pre></div>
+<pre class="shell"><code>$ rspec spec/security_spec.rb -e rq08</code></pre></li>
+</ul></li>
+<li><p>Create a new controller to manage the user's <code>session</code> when interacting with the server.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Use the <code>rails g controller</code> command to create a <code>Sessions</code> controller with the following actions:</li>
+</ol>
+<ul>
+<li>new</li>
+<li>create</li>
+<li>destroy</li>
+</ul>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Clean up the <code>config/routes.rb</code> file edited by the <code>rails g controller</code> command to be the following:</li>
+</ol>
+<ul>
+<li><p>generated:</p>
+<pre><code>get &#39;sessions/new&#39;
+get &#39;sessions/create&#39;
+get &#39;sessions/destroy&#39;</code></pre></li>
+<li><p>change to:</p>
+<pre><code>resources :sessions, only: [:new, :create, :destroy] </code></pre></li>
+</ul>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Map the GET <code>/login</code> action to <code>sessions#new</code> in <code>config/routes.rb</code>. Have this be referred to as the <code>login</code> resource so <code>rake routes</code> generates a <code>login</code>_path helper.</li>
+</ol>
+<pre><code>get &quot;/login&quot; =&gt; &quot;sessions#new&quot;, as: &quot;login&quot;</code></pre>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Map the DELETE <code>/login</code> action to <code>sessions#destroy</code> in <code>config/routes.rb</code>. Have this referred to as the <code>logout</code> resource so <code>rake routes</code> reports a <code>logout</code>_path helper.</li>
+</ol>
+<pre><code>delete &quot;/logout&quot; =&gt; &quot;sessions#destroy&quot;, as: &quot;logout&quot;</code></pre>
+<pre class="shell"><code>$ rspec spec/security_spec.rb -e rq09</code></pre></li>
+<li><p>Implement the <code>Sessions</code> controller class and view. This should permit a caller to willingly navigate to the <code>/login</code> page, login with a correct password, and proceed to the root URI. Nothing will stop an un-authenticated user from accessing the same list at this time. (Hint: the information to complete this step is contained in module 4, lesson 2, lecture:<code>Sessions and Controller View</code>)</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Leave the <code>new</code> method in its default state. This will cause the route to continue straight to <code>views/sessions/new.html.erb</code>.</p></li>
+<li><p>Update the <code>sessions#new</code> page (<code>views/sessions/new.html.erb</code>) to declare a form:</p></li>
+</ol>
+<ul>
+<li>for a <code>User</code> model type :user; this will cause the properties of the form to be assigned to an instance of a <code>User</code></li>
+<li>with a <code>sessions_path</code> URI; this will cause a POST to the sessions#create URI to be invoked when a submit is called</li>
+<li>with a :username text_field; this will assign the user input to the <code>user[username]</code> property</li>
+<li>with a :password password_field; this will obfuscate the user's password while being typed and assign the user input to the <code>user[password]</code> property</li>
+<li><p>with a submit action; this will submit the form to the server when pressed</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;h1&gt;</span>Login<span class="kw">&lt;/h1&gt;</span>
+<span class="er">&lt;</span>%= form_for(:user, url: sessions_path) do |f| %&gt;
+  <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;field&quot;</span><span class="kw">&gt;</span>
+      <span class="er">&lt;</span>%= f.label :username %&gt; <span class="kw">&lt;br/&gt;</span> 
+      <span class="er">&lt;</span>%= f.text_field :username %&gt;
+  <span class="kw">&lt;/div&gt;</span>
+  <span class="kw">&lt;p/&gt;</span>
+  <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;field&quot;</span><span class="kw">&gt;</span>
+      <span class="er">&lt;</span>%= f.label :password %&gt; <span class="kw">&lt;br/&gt;</span> 
+      <span class="er">&lt;</span>%= f.password_field :password %&gt;
+  <span class="kw">&lt;/div&gt;</span>
+  <span class="kw">&lt;p/&gt;</span>
+  <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;actions&quot;</span><span class="kw">&gt;</span>
+      <span class="er">&lt;</span>%= f.submit &quot;Login&quot; %&gt;
+  <span class="kw">&lt;/div&gt;</span>
+<span class="er">&lt;</span>% end %&gt;</code></pre></div>
+<pre class="shell"><code>$ rspec spec/security_spec.rb -e rq10b</code></pre></li>
+</ul>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Implement the <code>create</code> method as follows:</li>
+</ol>
+<ul>
+<li>get the user's <code>username</code> and <code>password</code> from the submitted form</li>
+<li>find the user based on <code>username</code></li>
+<li>authenticate the user using the supplied <code>password</code></li>
+<li>if authenticated</li>
+<li>store the user.id in the <code>session</code></li>
+<li>redirect the caller to the <code>root_path</code> of the application and supply a flash.notice message announcing successful login</li>
+<li>if not authenticated</li>
+<li><p>redirect the caller to the <code>login_path</code> and supply an flash.alert message</p>
+<pre class="shell"><code>$ rspec spec/security_spec.rb -e rq10c</code></pre></li>
+</ul>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Implement the <code>destroy</code> method as follows:</li>
+</ol>
+<ul>
+<li>reset the <code>session</code>, wiping out the user's session and everything in it</li>
+<li><p>redirect the caller to the <code>login_path</code> with a flash.notice message announcing successful logout</p>
+<pre class="shell"><code>$ rspec spec/security_spec.rb -e rq10d</code></pre></li>
+</ul>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Remove the <code>destroy</code> and <code>create</code> pages in the view, generated by <code>rails g controller</code> since they are not being used.</li>
+</ol>
+<pre class="shell"><code>$ rspec spec/security_spec.rb -e rq10d</code></pre></li>
+<li><p>Require users to authenticate with your application prior to accessing anything except the login page. At the completion of these steps, no one should be able to access anything except the login page -- until they successfully authenticate. (Hint: the information to complete this step is contained within module 4, lesson 2, lecture: <code>Authorization</code>)</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Define a <code>logged_in? helper method in the</code>ApplicationController<code>class  that evaluates to</code>true` if the there is a user associated with the session.</p></li>
+<li><p>Define a <code>current_user</code> helper method in the <code>ApplicationController</code> class that finds and returns the <code>User</code> instance associated with the session.</p></li>
+<li><p>Expose <code>logged_in?</code> and <code>current_user</code> as helper methods outside of the controller using <code>helper_method</code>. Note these methods were already available to all controller sub-classes. This designation makes them available to the views as well.</p></li>
+<li><p>Define a <code>ensure_login</code> helper method in the <code>ApplicationController</code> class that redirects the caller to the <code>login_path</code> if they are not logged in. Note this method is available to all controller sub-classes in the application.</p></li>
+<li><p>Define that all methods perform <code>ensure_login</code> before they are called using <code>before_action</code>.</p></li>
+<li><p>Create an exception to the above rule so that <code>sessions#new</code> and <code>sessions#create</code> can be accessed by an unauthenticated user -- otherwise no one will be able to access the login page.</p></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">class SessionsController <span class="er">&lt;</span> ApplicationController
+  skip_before_action :ensure_login, only: [:new, :create]</code></pre></div>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>Update the <code>views/layouts/application.html.erb</code> page to include user/logout information based on the current session state. With this snippet in place -- you should be able to login and see the current_user.username displayed in the right, top corner of the display.</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="er">&lt;</span>% if logged_in? %&gt;
+  <span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&#39;float: right;&#39;</span><span class="kw">&gt;</span>
+    Logged in as <span class="er">&lt;</span>%= current_user.username %&gt; |
+    <span class="er">&lt;</span>%= link_to &quot;Logout&quot;, logout_path, method: :delete %&gt; 
+  <span class="kw">&lt;/div&gt;</span>
+<span class="er">&lt;</span>% end %&gt;</code></pre></div>
+<pre class="shell"><code>$ rspec spec/authentication_spec.rb -e rq11</code></pre></li>
+<li><p>Update the application so that authenticated users can only have access to <code>TodoLists</code> associated with their specific user. This mostly involves updating the <code>TodoListController</code> to change all global <code>TodoList</code> commands to be scoped <code>current_user.todo_lists</code> commands. (Hint: If you need some practice accessing <code>TodoLists</code> for an authenticated user, try the following commands in the <code>rails console</code>.</p>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">$ rails c
+&gt; user_id=<span class="dt">User</span>.where(username:<span class="st">&quot;rich&quot;</span>).first.id
+&gt; current_user=<span class="dt">User</span>.find(user_id)
+&gt; current_user.todo_lists.count
+ =&gt; <span class="dv">49</span> <span class="co">#random assignment -- some number greater than 0</span></code></pre></div>
+<p>This mostly involves changing the following from/to.</p>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">from: <span class="dt">TodoList</span>.x
+to:   current_user.todo_lists.x</code></pre></div>
+<p>At this point, logged in users should only be able to see their <code>TodoList</code>s</p>
+<pre class="shell"><code>$ rspec spec/authentication_spec.rb -e rq12</code></pre></li>
+<li><p>Add pagination to your application to help scale and manage methods that can return unbounded collections of information.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Verify the <code>will_paginate</code> gem is added to your Gemfile.</p></li>
+<li><p>Update the <code>todolist#index</code> action to return a page of <code>TodoLists</code> associated with the <code>current_user</code> that are up to 8 objects per_page. (Hint: If you are not familiar with how <code>will_paginate</code> works, you can get some familiarity using the <code>rails c</code> and Active Record commands. <code>will_paginate</code> adds an additional method to all model classes to be able to break find command results into pages and page results.)</p></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">$ rails c
+&gt; <span class="dv">3</span>.times {|n| p <span class="dt">TodoList</span>.paginate(page<span class="st">:n</span><span class="dv">+1</span>, per_page:<span class="dv">1</span>)}
+&gt; p <span class="dt">TodoList</span>.paginate(page:<span class="dv">1</span>, per_page:<span class="dv">1</span>).total_pages
+ =&gt; <span class="dv">101</span></code></pre></div>
+<p>The page number will be available in the <code>params[:page]</code> property of the call.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Add <code>will_paginate</code> to your <code>todolists#index</code> page and apply it to your <code>@todo_lists</code> result from the controller.</li>
+</ol>
+<p>At this point, logged in users should only be able to see their <code>TodoList</code>s and</p>
+<pre class="shell"><code>$ rspec spec/pagination_spec.rb</code></pre></li>
+<li><p>Perform an end-to-end check of your work. Before you do, you must remove the confirmation dialogs from your Destroy links since we are not using a webdriver that supports javascript for this assignment. Inside the todo_list show.html.erb file you will need to change the destroy link to eliminate the confirmation dialog:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">from:  <span class="er">&lt;</span>%= link_to &#39;Destroy&#39;, [@todo_list, todo_item], method: :delete, data: { confirm: &#39;Are you sure?&#39; } %&gt;
+to: <span class="er">&lt;</span>%= link_to &#39;Destroy&#39;, [@todo_list, todo_item], method: :delete %&gt;</code></pre></div>
+<p>Do the same for todo_list index.html.erb</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">from: <span class="er">&lt;</span>%= link_to &#39;Destroy&#39;, todo_list, method: :delete, data: { confirm: &#39;Are you sure?&#39; } %&gt;
+to: <span class="er">&lt;</span>%= link_to &#39;Destroy&#39;, todo_list, method: :delete %&gt;</code></pre></div>
+<ol style="list-style-type: lower-alpha">
+<li><p>Login to the application as <code>rich</code></p></li>
+<li><p>Access the first <code>TodoList</code> on the second page</p></li>
+<li><p>Complete the first <code>TodoItem</code> in that <code>TodoList</code> if not completed</p></li>
+<li><p>Create a new <code>TodoItem</code> for that <code>TodoList</code></p></li>
+<li><p>Delete a <code>TodoItem</code> from that <code>TodoList</code></p></li>
+<li><p>Create a new <code>TodoList</code></p></li>
+<li><p>Delete a <code>TodoList</code></p></li>
+</ol>
+<pre class="shell"><code>rspec spec/end2end_spec.rb</code></pre></li>
+</ol>
+<h3 id="self-gradingfeedback">Self Grading/Feedback</h3>
+<p>Some unit tests have been provided in the bootstrap files and provide examples of tests the grader will be evaluating for when you submit your solution. They must be run from the project root directory.</p>
+<pre class="shell"><code>$ rspec (file)
+...
+(N) examples, 0 failures</code></pre>
+<p>You can run as many specific tests you wish be adding <code>-e rq## -e rq##</code></p>
+<pre class="shell"><code>$ rspec (file) -e rq01 -e rq02</code></pre>
+<p>Note that some of the earlier specs cannot be run once security has been fully enabled. Use the <code>end2end</code> test when complete. Each of the individual requirements list specific specs that can be used during the time of that development.</p>
+<h3 id="submission">Submission</h3>
+<p>Submit an .zip archive (other archive forms not currently supported) with your solution root directory as the top-level (e.g., your Gemfile and sibling files must be in the root of the archive and <em>not</em> in a sub-folder. The grader will replace the spec files with fresh copies and will perform a test with different query terms.</p>
+<pre class="text"><code>|-- app
+|   |-- assets
+|   |-- controllers
+|   |-- helpers
+|   |-- mailers
+|   |-- models
+|   `-- views
+|-- bin
+|-- config
+|-- config.ru
+|-- db
+|-- Gemfile
+|-- Gemfile.lock
+|-- lib
+|-- log
+|-- public
+|-- Rakefile
+|-- README.rdoc
+|-- test
+`-- vendor</code></pre>
+<h4 id="last-updated-2015-10-25">Last Updated: 2015-10-25</h4>
