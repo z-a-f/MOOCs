@@ -209,8 +209,8 @@ def test_number():
     growth_factor = 2
     print "Spec_string: ",spec_string,"by factors of",growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
-    f_list = ("n**2","n","1")
-    # f_list = ("n","1",)
+    #f_list = ("n**2","n","1")
+    f_list = ("n","1",)
     # f_list = f_list_all
     run_times = []
     trials = 1000
@@ -335,12 +335,12 @@ def test_string():
 
     print
     print "Test String-2: concatenate two string of length n"
-    spec_string = "1000<=n<=500000"
+    spec_string = "1000<=n<=1000000"
     growth_factor = 2
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
-    # f_list = ("n","1")
-    f_list = ("n","1",)
+    f_list = ("n","1")
+    # f_list = ("n", "lg(n)", "1")
     # f_list = f_list_all
     run_times = []
     trials = 1000
@@ -550,7 +550,7 @@ def test_list():
     print "Spec_string: ",spec_string, "by factors of", growth_factor
     var_list, param_list = make_param_list(spec_string,growth_factor)
     # f_list = ("n","1")
-    f_list = ("n*lg(n)","1")
+    f_list = ("n*lg(n)","n", "1")
     # f_list = f_list_all
     run_times = []
     trials = 200
