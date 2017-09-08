@@ -1,0 +1,9 @@
+data
+.ipynb_checkpoints
+*.h5
+models
+*.swp
+*.p
+
+# Folder with the data
+*_data
