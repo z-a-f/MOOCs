@@ -12,35 +12,30 @@ class Net(nn.Module):
         super(Net, self).__init__()
         self.batchnorm = nn.BatchNorm2d(1)
 
-        #(W-F)/S +1 = (224-5)/1 +1 =220 
         self.conv1 = nn.Conv2d(1, 32, 5)
-        I.xavier_normal_(self.conv1.weight)
-        #110X110X32
         self.pool1= nn.MaxPool2d(2,2)
-        #(W-F)/S +1 = (110-4)/1 +1 = 108
+
         self.conv2 = nn.Conv2d(32, 64, 3)
-        #54X54X64
         self.pool2= nn.MaxPool2d(2,2)
-        #(W-F)/S +1 = (54-3)/1 +1 = 52
+
         self.conv3 = nn.Conv2d(64, 128, 3)
-        I.xavier_normal_(self.conv3.weight)
-        #26X26X128
         self.pool3 = nn.MaxPool2d(2,2)
-        #(W-F)/S +1 = (26-3)/1 +1 = 24
+
         self.conv4 = nn.Conv2d(128, 256, 3)
-        #12X12X256
         self.pool4 = nn.MaxPool2d(2,2)
-        #(W-F)/S +1 = (12-1)/1 +1 = 12
+
         self.conv5 = nn.Conv2d(256, 512, 1)
-        #6X6X512
         self.pool5 = nn.MaxPool2d(2,2)
 
         self.fc1= nn.Linear(6*6*512,1024)
-        I.xavier_normal_(self.fc1.weight)
         self.fc2= nn.Linear(1024, 136)
-        I.xavier_normal_(self.fc2.weight)
         
         self.dropout = nn.Dropout(p=0.25)
+
+        I.xavier_normal_(self.conv1.weight)
+        I.xavier_normal_(self.conv3.weight)
+        I.xavier_normal_(self.fc1.weight)
+        I.xavier_normal_(self.fc2.weight)
 
         
     def forward(self, x):
