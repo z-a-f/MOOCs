@@ -10,7 +10,7 @@ class Net(nn.Module):
 
     def __init__(self):
         super(Net, self).__init__()
-        self.batchnorm = nn.BatchNorm2d(1)
+        # self.batchnorm = nn.BatchNorm2d(1)
 
         self.conv1 = nn.Conv2d(1, 32, 5)
         self.pool1= nn.MaxPool2d(2,2)
@@ -27,10 +27,10 @@ class Net(nn.Module):
         self.conv5 = nn.Conv2d(256, 512, 1)
         self.pool5 = nn.MaxPool2d(2,2)
 
-        self.fc1= nn.Linear(6*6*512,1024)
-        self.fc2= nn.Linear(1024, 136)
+        self.fc1= nn.Linear(6*6*512,2048)
+        self.fc2= nn.Linear(2048, 136)
         
-        self.dropout = nn.Dropout(p=0.25)
+        self.dropout = nn.Dropout(p=0.5)
 
         I.xavier_normal_(self.conv1.weight)
         I.xavier_normal_(self.conv3.weight)
@@ -40,7 +40,7 @@ class Net(nn.Module):
         
     def forward(self, x):
         ## Define the feedforward behavior of this model
-        x = self.batchnorm(x)
+        # x = self.batchnorm(x)
         x = self.pool1(F.selu(self.conv1(x)))
         x = self.pool2(F.selu(self.conv2(x)))
         x = self.pool3(F.selu(self.conv3(x)))
