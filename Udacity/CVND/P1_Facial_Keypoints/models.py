@@ -10,23 +10,34 @@ class Net(nn.Module):
 
     def __init__(self):
         super(Net, self).__init__()
-        # self.batchnorm = nn.BatchNorm2d(1)
+        ## Batchnorm converges to a low error, but when on the image it's off.
+        ## Still need to keep it because I forgot to remove it during training :(
+        self.batchnorm = nn.BatchNorm2d(1)
 
+        ## 5 Conv + Selu + pool layers, with doubling the sizing every time.
+        ## Output of one layer is the input of the next.
+
+        ## 1x224x224 => 32x110x110
         self.conv1 = nn.Conv2d(1, 32, 5)
         self.pool1= nn.MaxPool2d(2,2)
 
+        ## 32x110x110 => 64x54x54
         self.conv2 = nn.Conv2d(32, 64, 3)
         self.pool2= nn.MaxPool2d(2,2)
 
+        ## 64x54x54 => 128x26x26
         self.conv3 = nn.Conv2d(64, 128, 3)
         self.pool3 = nn.MaxPool2d(2,2)
 
+        ## 128x26x26 => 256x26x26
         self.conv4 = nn.Conv2d(128, 256, 3)
         self.pool4 = nn.MaxPool2d(2,2)
 
+        ## 256x26x26 => 512x6x6
         self.conv5 = nn.Conv2d(256, 512, 1)
         self.pool5 = nn.MaxPool2d(2,2)
 
+        ## 512*6*6 => 2048(with activation) => 136
         self.fc1= nn.Linear(6*6*512,2048)
         self.fc2= nn.Linear(2048, 136)
         
@@ -39,7 +50,7 @@ class Net(nn.Module):
 
         
     def forward(self, x):
-        ## Define the feedforward behavior of this model
+        ## Batchnorm is not used!
         # x = self.batchnorm(x)
         x = self.pool1(F.selu(self.conv1(x)))
         x = self.pool2(F.selu(self.conv2(x)))
