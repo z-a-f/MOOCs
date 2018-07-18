@@ -1,1 +1,1 @@
-# Coursera
+# This branch is only for submiting the Udacity CV stuff.

@@ -1,7 +1,0 @@
-notMNIST*
-notMNIST_large*
-notMNIST_small*
-
-*.tar.gz
-
-.ipynb_checkpoints
