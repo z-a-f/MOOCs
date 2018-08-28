@@ -2,10 +2,6 @@ import torch
 import torch.nn as nn
 import torchvision.models as models
 
-"""
-TODO:
-    # Add BatchNorm
-"""
 class EncoderCNN(nn.Module):
     def __init__(self, embed_size):
         super(EncoderCNN, self).__init__()
@@ -23,12 +19,6 @@ class EncoderCNN(nn.Module):
         features = self.embed(features)
         return features
     
-
-"""
-TODO:
-    # Convert captions and concatenate with features.
-    # Add Dropout
-"""
 class DecoderRNN(nn.Module):
     def __init__(self, embed_size, hidden_size, vocab_size, num_layers=1):
         super(DecoderRNN, self).__init__()
@@ -48,14 +38,6 @@ class DecoderRNN(nn.Module):
     def forward(self, features, captions):
         caption_embed = self.embed(captions[:, :-1])
         embeddings = torch.cat((features.unsqueeze(1), caption_embed), 1)
-
-        # features = features.unsqueeze(0)
-        # print(features.shape, captions.shape)
-        # batch_size = features.shape[0]
-
-        # lstm_h = torch.randn(self.num_layers, batch_size, self.hidden_size)
-        # lstm_c = torch.randn(self.num_layers, batch_size, self.hidden_size)
-        # lstm_out, (lstm_h, lstm_c) = self.lstm(features, (lstm_h, lstm_c))
         lstm_out, self.hidden = self.lstm(embeddings)
         output = self.fc(lstm_out)
 
@@ -63,4 +45,11 @@ class DecoderRNN(nn.Module):
 
     def sample(self, inputs, states=None, max_len=20):
         " accepts pre-processed image tensor (inputs) and returns predicted sentence (list of tensor ids of length max_len) "
-        pass
+        result = []
+        for iteration in range(max_len):
+            lstm_out, states = self.lstm(inputs, states)
+            print(lstm_out.squeeze(1)[0].shape)
+            output = self.fc(lstm_out.squeeze(1)).max(1)[1]
+            result.append(output.item())
+            inputs = self.embed(output).unsqueeze(1)
+        return result

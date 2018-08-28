@@ -6,7 +6,6 @@ import torch.nn as nn
 from torchvision import transforms
 
 COCOPATH = '/home/zafar/Desktop/Data/COCO' if os.environ['USER'] == 'zafar' else '/opt/cocoapi'
-# sys.path.append('/opt/cocoapi/PythonAPI')
 sys.path.append(os.path.join(COCOPATH, 'PythonAPI'))
 
 from pycocotools.coco import COCO
@@ -28,10 +27,10 @@ log_file = 'training_log.txt'       # name of file with saved training loss and 
 # (Optional) TODO #2: Amend the image transform below.
 transform_train = transforms.Compose([ 
     transforms.Resize(256),                          # smaller edge of image resized to 256
-    transforms.RandomRotation(15.0),                 # Rotate the image randomly
+    transforms.RandomRotation(5.0),                  # Rotate the image randomly
     transforms.RandomCrop(224),                      # get 224x224 crop from random location
     transforms.RandomHorizontalFlip(),               # horizontally flip image with probability=0.5
-    transforms.ColorJitter(0.1, 0.1, 0.1),           # Jitter the color a little
+    transforms.ColorJitter(0.05, 0.05, 0.05),        # Jitter the color a little
     transforms.ToTensor(),                           # convert the PIL Image to a tensor
     transforms.Normalize((0.485, 0.456, 0.406),      # normalize image for pre-trained model
                          (0.229, 0.224, 0.225))])
@@ -79,6 +78,8 @@ import time
 # Open the training log file.
 f = open(log_file, 'w')
 
+smallest_loss = np.inf
+
 for epoch in range(1, num_epochs+1):
     epoch_loss = 0.0
     for i_step in range(1, total_step+1):
@@ -91,7 +92,7 @@ for epoch in range(1, num_epochs+1):
         
         # Obtain the batch.
         images, captions = next(iter(data_loader))
-
+        # print(images.shape)
         # Move batch of images and captions to GPU if CUDA is available.
         images = images.to(device)
         captions = captions.to(device)
@@ -128,11 +129,18 @@ for epoch in range(1, num_epochs+1):
         if i_step % print_every == 0:
             print('\r' + stats)
         epoch_loss += loss.item()
-            
+    epoch_loss /= total_step
+
     # Save the weights.
-    if epoch % save_every == 0:
-        torch.save(decoder.state_dict(), os.path.join('./models', 'decoder-%d-%f.pkl' % epoch, epoch_loss))
-        torch.save(encoder.state_dict(), os.path.join('./models', 'encoder-%d-%f.pkl' % epoch, epoch_loss))
+    if save_every == 1:
+        # Only save the best one so far!
+        if epoch_loss <= smallest_loss:
+            torch.save(decoder.state_dict(), os.path.join('./models', "{:02d}-decoder-{:.4f}.pkl".format(epoch, epoch_loss)))
+            torch.save(encoder.state_dict(), os.path.join('./models', "{:02d}-encoder-{:.4f}.pkl".format(epoch, epoch_loss)))
+            smallest_loss = epoch_loss
+    elif epoch % save_every == 0:
+        torch.save(decoder.state_dict(), os.path.join('./models', "{:02d}-decoder-{:.4f}.pkl".format(epoch, epoch_loss)))
+        torch.save(encoder.state_dict(), os.path.join('./models', "{:02d}-encoder-{:.4f}.pkl".format(epoch, epoch_loss)))
 
 # Close the training log file.
 f.close()
