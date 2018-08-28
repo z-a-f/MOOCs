@@ -132,7 +132,7 @@ for epoch in range(1, num_epochs+1):
     epoch_loss /= total_step
 
     # Save the weights.
-    if save_every == 1:
+    if save_every == -1:
         # Only save the best one so far!
         if epoch_loss <= smallest_loss:
             torch.save(decoder.state_dict(), os.path.join('./models', "{:02d}-decoder-{:.4f}.pkl".format(epoch, epoch_loss)))
